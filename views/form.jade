@@ -1,0 +1,12 @@
+extends layout 
+
+
+block content 
+
+    h1 Form
+
+    form(action="/new", method="post") 
+        input(type="text", name="name" placeholder="Name")
+        input(type="text", name="message" placeholder="Message" maxLength=30)
+        button(type="submit") Send Message 
+    

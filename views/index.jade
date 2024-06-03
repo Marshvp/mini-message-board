@@ -1,5 +1,14 @@
 extends layout
 
+
 block content
   h1= title
   p Welcome to #{title}
+
+  ul 
+    each msg in messages 
+      li=  msg.user  
+      p #{msg.text}
+  
+  form(action='/new', method="get") 
+    button(type="text") New Message
